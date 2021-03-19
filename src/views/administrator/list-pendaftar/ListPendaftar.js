@@ -50,8 +50,6 @@ const ListPendaftar = () => {
         getperiode();
     }, []);
 
-    console.log(input.periode)
-
     return (
         <>
             <CRow>
@@ -394,6 +392,24 @@ const ListPendaftar = () => {
                                                 <CInput type="text" id="kabupaten" name="kabupaten" value={currentDataUser.kabupaten} placeholder="Masukkan Kabupaten" disabled />
                                             </CCol>
                                         </CFormGroup>
+
+                                        <CRow>
+                                            <CCol xs="12" md="6">
+                                                <a className="btn btn-success" href={`${process.env.REACT_APP_PUBLIC_URL}/berkas/${currentDataUser.berkas.ijazah}`} download={currentDataUser.berkas.ijazah} target="_blank">Download Ijazah</a>
+                                            </CCol>
+                                            <CCol xs="12" md="6">
+                                                <a className="btn btn-success" href={`${process.env.REACT_APP_PUBLIC_URL}/berkas/${currentDataUser.berkas.skhun}`} download={currentDataUser.berkas.skhun} target="_blank">Download SKHUN</a>
+                                            </CCol>
+                                        </CRow>
+
+                                        <CRow className="mt-2">
+                                            <CCol xs="12" md="6">
+                                                <a className="btn btn-success" href={`${process.env.REACT_APP_PUBLIC_URL}/berkas/${currentDataUser.berkas.kartu_keluarga}`} download={currentDataUser.berkas.kartu_keluarga} target="_blank">Download Kartu Keluarga</a>
+                                            </CCol>
+                                            <CCol xs="12" md="6">
+                                                <a className="btn btn-success" href={`${process.env.REACT_APP_PUBLIC_URL}/berkas/${currentDataUser.berkas.raport}`} download={currentDataUser.berkas.raport} target="_blank">Download Raport</a>
+                                            </CCol>
+                                        </CRow>
                                     </CCol>
                                 </CRow>
                             </>
