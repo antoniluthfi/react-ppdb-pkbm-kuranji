@@ -455,7 +455,24 @@ const DataSiswaHelper = () => {
     }
 
     const uploadBerkas = async id => {
-        if(inputBerkas.length != 4) {
+        const ijazah = input.filter(a => a.name.includes('ijazah'));
+        const skhun = input.filter(a => a.name.includes('skhun'));
+        const kk = input.filter(a => a.name.includes('kk') || a.name.includes('kartu keluarga'));
+        const raport = input.filter(a => a.name.includes('raport'));
+
+        let error = '';
+        if(!ijazah.length) error = 'File ijazah tidak ada!';
+        else if(!skhun.length) error = 'File skhun tidak ada!';
+        else if(!kk.length) error = 'File kartu keluarga tidak ada!';
+        else if(!raport.length) error = 'File raport tidak ada!';
+
+        if(error != '') {
+            Swal.fire(
+                'Gagal',
+                error,
+                'error'
+            );
+        } else if(inputBerkas.length != 4) {
             Swal.fire(
                 'Gagal',
                 input.length < 4 ? 'File tidak boleh kurang dari 4' : 'File tidak boleh lebih dari 4',

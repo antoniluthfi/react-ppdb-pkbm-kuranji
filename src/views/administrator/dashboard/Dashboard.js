@@ -78,16 +78,16 @@ const Dashboard = () => {
                     <CCard accentColor="primary">
                         <CCardHeader>Data Pendaftaran</CCardHeader>
                         <CCardBody>
-                            <p className="display-4 mt-0 mb-0" style={{ fontSize: 22 }}>Total Pendaftar : {loadTotalPendaftar ? null : totalPendaftar.total_pendaftar} Orang</p>
+                            <p className="display-4 mt-0 mb-0" style={{ fontSize: 22 }}>Total Pendaftar : {loadTotalPendaftar ? 0 : totalPendaftar.total_pendaftar == null ? 0 : totalPendaftar.total_pendaftar} Orang</p>
                             <CRow>
                                 <CCol xs="12" md="6">
-                                    <p className="lead mt-0 mb-0">Pendaftar Paket A : {loadTotalPendaftar ? null : totalPendaftar.paket_a} Orang</p>
-                                    <p className="lead mt-0 mb-0">Pendaftar Paket B : {loadTotalPendaftar ? null : totalPendaftar.paket_b} Orang</p>
-                                    <p className="lead mt-0 mb-0">Pendaftar Paket C : {loadTotalPendaftar ? null : totalPendaftar.paket_c} Orang</p>
+                                    <p className="lead mt-0 mb-0">Pendaftar Paket A : {loadTotalPendaftar ? 0 : totalPendaftar.paket_a == null ? 0 : totalPendaftar.paket_a} Orang</p>
+                                    <p className="lead mt-0 mb-0">Pendaftar Paket B : {loadTotalPendaftar ? 0 : totalPendaftar.paket_b == null ? 0 : totalPendaftar.paket_b} Orang</p>
+                                    <p className="lead mt-0 mb-0">Pendaftar Paket C : {loadTotalPendaftar ? 0 : totalPendaftar.paket_c == null ? 0 : totalPendaftar.paket_c} Orang</p>
                                 </CCol>
                                 <CCol xs="12" md="6">
-                                    <p className="lead mt-0 mb-0">Diterima : {loadTotalPendaftar ? null : totalPendaftar.diterima} Orang</p>
-                                    <p className="lead mt-0 mb-0">Ditolak : {loadTotalPendaftar ? null : totalPendaftar.tidak_diterima} Orang</p>
+                                    <p className="lead mt-0 mb-0">Diterima : {loadTotalPendaftar ? 0 : totalPendaftar.diterima == null ? 0 : totalPendaftar.diterima} Orang</p>
+                                    <p className="lead mt-0 mb-0">Ditolak : {loadTotalPendaftar ? 0 : totalPendaftar.tidak_diterima == null ? 0 : totalPendaftar.tidak_diterima} Orang</p>
                                 </CCol>
                             </CRow>
                         </CCardBody>
