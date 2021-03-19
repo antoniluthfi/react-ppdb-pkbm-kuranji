@@ -150,7 +150,6 @@ const DataSiswa = () => {
                                                 <CButton size="sm" color="info" onClick={() => getDataUserById(item.id, 'view')}>
                                                     View Details
                                                 </CButton>
-                                                {console.log(item.berkas)}
                                                 {item.tgl_lahir == null ?
                                                     <CButton size="sm" color="warning" className="ml-1" onClick={() => getDataUserById(item.id, 'update')}>
                                                         Update

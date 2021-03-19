@@ -55,7 +55,7 @@ const ListPendaftar = () => {
             <CRow>
                 <CCol xs="12" lg="12">
                     <CCard>
-                        <CCardHeader>Data Administrator</CCardHeader>
+                        <CCardHeader>Data Pendaftaran</CCardHeader>
                         <CRow>
                             <CCol xs="6" lg="6">
                                 <CButton color="info" className="ml-3 mt-2" onClick={() => setCetakLaporanModal(!cetakLaporanModal)}>Cetak Laporan</CButton>
