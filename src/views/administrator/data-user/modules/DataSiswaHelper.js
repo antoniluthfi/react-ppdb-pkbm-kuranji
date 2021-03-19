@@ -455,10 +455,10 @@ const DataSiswaHelper = () => {
     }
 
     const uploadBerkas = async id => {
-        const ijazah = input.filter(a => a.name.includes('ijazah'));
-        const skhun = input.filter(a => a.name.includes('skhun'));
-        const kk = input.filter(a => a.name.includes('kk') || a.name.includes('kartu keluarga'));
-        const raport = input.filter(a => a.name.includes('raport'));
+        const ijazah = inputBerkas.filter(a => a.name.includes('ijazah'));
+        const skhun = inputBerkas.filter(a => a.name.includes('skhun'));
+        const kk = inputBerkas.filter(a => a.name.includes('kk') || a.name.includes('kartu keluarga'));
+        const raport = inputBerkas.filter(a => a.name.includes('raport'));
 
         let error = '';
         if(!ijazah.length) error = 'File ijazah tidak ada!';
