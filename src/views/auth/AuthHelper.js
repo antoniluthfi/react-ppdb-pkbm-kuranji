@@ -21,7 +21,7 @@ const AuthHelper = () => {
 
     const register = async () => {
         await axios.post(`${baseurl}/register`, {
-            name: input.password,
+            name: input.name,
             email: input.email,
             password: input.password,
             c_password: input.c_password
