@@ -123,7 +123,7 @@ const AjukanPendaftaranHelper = () => {
     }
 
     const cetakKartuPendaftaran = async id => {
-        window.open(`${process.env.REACT_APP_PUBLIC_URL}/laporan/data-user/${id}`, '_blank')
+        window.open(`${process.env.REACT_APP_PUBLIC_URL}/laporan/kartu-pendaftaran/${id}`, '_blank')
     }
 
     return {
